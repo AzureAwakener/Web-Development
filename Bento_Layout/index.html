@@ -1,32 +1,271 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-    <head>
-        <title>Bento Layout</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS v5.3.8 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
-    </head>
+<head>
+    <title>Bento Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-             <h1>Hello</h1>
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body class="bg-dark-subtle text-dark">
+    <nav class="navbar navbar-expand-lg bg-warning border-bottom border-dark border-2">
+        <div class="container">
+            <a class="navbar-brand fw-bold">P4 <span class="d-block small lh-1">REVIVAL</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#p4nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="p4nav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#inaba">Inaba</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#characters">Characters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#channel">Midnight Channel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4" id="home">
+        <div class="row g-3">
+            <!-- Hero -->
+            <section class="col-12 col-lg-8">
+                <div class="card h-100 text-bg-dark border-0">
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge text-bg-warning mb-3">A FAN-MADE WEBSITE</span>
+                            <p class="text-warning fw-bold mb-2">REACH OUT TO THE TRUTH</p>
+                            <h1 class="display-3 fw-bold">PERSONA 4<br><span class="text-warning">REVIVAL</span></h1>
+                            <p class="lead col-lg-9">Return to Inaba. Reconnect with old friends. Look beyond the fog
+                                and uncover the truth.</p>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <a class="btn btn-warning fw-bold" href="#channel">Enter the Midnight Channel</a>
+                            <a class="btn btn-outline-light" href="#characters">Meet the Investigation Team</a>
+                        </div>
+                        <!-- Remove after placing image -->
+                        <p class="small text-light-emphasis mt-4 mb-0">
+                            Add backgroud artwork thingy here
+                        </p>
+                        <!--  -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inaba card -->
+            <section class="col-12 col-md-6 col-lg-4" id="inaba">
+                <div class="card h-100 border-0 bg-warning-subtle">
+                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                        <span class="badge text-bg-dark align-self-start">LOCATION</span>
+                        <div>
+                            <h2 class="h3 fw-bold">Welcome to Inaba</h2>
+                            <p class="mb-3">A quiet rural town surrounded by mountains, rice fields, and winding rivers. Its close-knit community and peaceful atmosphere hide a darker mystery.</p>
+                            <a href="#media" class="link-secondary fw-bold">Explore the town →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Midnight Channel -->
+            <section class="col-12 col-md-6 col-lg-4" id="channel">
+                <div class="card h-100 text-bg-dark border-0">
+                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                        <span class="badge text-bg-warning align-self-start">BROADCAST</span>
+                        <div>
+                            <div class="display-4 fw-bold mb-3" id="countdown">
+                                Loading...
+                            </div>
+
+                            <p class="small text-warning mb-2">
+                                TIME UNTIL THE CHANNEL GOES LIVE
+                            </p>
+                            <h2 class="h3 fw-bold">The Midnight Channel</h2>
+                            <p class="text-light-emphasis">When the screen turns on at midnight, what will you see?</p>
+                            <a href="#story" class="btn btn-warning align-self-start">Wishlist Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Characters -->
+            <section class="col-12 col-lg-8" id="characters">
+                <div class="card h-100 border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+                            <div>
+                                <p class="text-uppercase small fw-bold text-light-emphasis mb-1">Meet the gang</p>
+                                <h2 class="h3 fw-bold mb-0">The Investigation Team</h2>
+                            </div>
+                            <a href="#media" class="link-secondary fw-bold">View all →</a>
+                        </div>
+                        <div class="row row-cols-2 row-cols-md-4 g-2">
+                            <div class="col">
+                                <div class="card h-100 bg-secondary-subtle border-0">
+                                    <div class="card-body">
+                                        <div
+                                            class="ratio ratio-1x1 bg-warning rounded mb-2 d-flex align-items-center justify-content-center">
+                                            <span class="display-5">?</span>
+                                        </div>
+                                        <h3 class="h6 fw-bold mb-1">Yu Narukami</h3>
+                                        <p class="small mb-0">The protagonist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 bg-dark border">
+                                    <div class="card-body">
+                                        <div
+                                            class="ratio ratio-1x1 bg-secondary-subtle rounded mb-2 d-flex align-items-center justify-content-center">
+                                            <span class="display-5">?</span>
+                                        </div>
+                                        <h3 class="h6 fw-bold mb-1">Yosuke</h3>
+                                        <p class="small mb-0">Partner in Crime</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 bg-dark border">
+                                    <div class="card-body">
+                                        <div
+                                            class="ratio ratio-1x1 bg-secondary-subtle rounded mb-2 d-flex align-items-center justify-content-center">
+                                            <span class="display-5">?</span>
+                                        </div>
+                                        <h3 class="h6 fw-bold mb-1">Chie</h3>
+                                        <p class="small mb-0">Kung-Fu Junkie</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 bg-dark border">
+                                    <div class="card-body">
+                                        <div
+                                            class="ratio ratio-1x1 bg-secondary-subtle rounded mb-2 d-flex align-items-center justify-content-center">
+                                            <span class="display-5">?</span>
+                                        </div>
+                                        <h3 class="h6 fw-bold mb-1">Yukiko</h3>
+                                        <p class="small mb-0">Heir of Amagi Inn</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Remove after placing images -->
+                        <p class="small text-body-secondary mt-3 mb-0">
+                            Replace ? with character portraits
+                        </p>
+                        <!--  -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Persona -->
+            <section class="col-12 col-md-6 col-lg-4" id="story">
+                <div class="card h-100 bg-warning border-0">
+                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                        <span class="small fw-bold text-uppercase text-dark">Accept the "Other" You</span>
+                        <div>
+                            <h2 class="display-6 fw-bold text-light">Shadow. Persona.</h2>
+                            <p class="text-light-emphasis">
+                                Reunite with Izanagi and use the power of your Persona to cast off the fog that looms over Inaba.
+                            </p>
+                            <a href="#media" class="btn btn-dark">Enter The Velvet Room</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Media -->
+            <section class="col-12 col-lg-4" id="media">
+                <div class="card h-100 text-bg-dark border-0">
+                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                        <span class="badge text-bg-warning align-self-start">GALLERY</span>
+                        <div>
+                            <h2 class="h2 fw-bold">Screenshots &amp; Sound</h2>
+                            <p class="text-light-emphasis">
+                                Insert artwork, music, and trailers.
+                            </p>
+                            <a href="#home" class="btn btn-outline-warning">Browse media</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social / Store Links -->
+            <section class="col-12 col-lg-4">
+                <div class="card h-100 bg-light border-0">
+                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                        <p class="text-uppercase fw-bold small text-dark mb-2">
+                            Your next investigation begins here
+                        </p>
+                        <div>
+                            <h2 class="h3 fw-bold text-warning">Ready to face the truth?</h2>
+                            <p class="text-dark"> Insert store links (steam, playstation, switch, xbox)</p>
+                            <a href="#home" class="btn btn-dark">Return to top ↑</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white rounded mt-3 p-4">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-md">
+                <div class="fw-bold">PERSONA 4 REVIVAL</div>
+                <div class="small text-light-emphasis">Fan-made website · Not affiliated with Atlus or Sega · For School Purposes Only
+                </div>
+            </div>
+            <div class="col-12 col-md-auto">
+                <span class="small text-warning fw-bold text-uppercase">Face your true self.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script>
+        // Replace this with the official release date when confirmed.
+        const releaseDate = new Date("2027-02-18T00:00:00+08:00").getTime();
+
+        const countdownElement = document.getElementById("countdown");
+
+        function updateCountdown() {
+            const now = Date.now();
+            const difference = releaseDate - now;
+
+            if (difference <= 0) {
+                countdownElement.textContent = "It's time!";
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
+
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
+
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
+
+            countdownElement.textContent =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        updateCountdown();
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
 </html>
