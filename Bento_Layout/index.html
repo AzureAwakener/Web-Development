@@ -60,7 +60,7 @@
             <span class="fw-bold text-uppercase">
                 ✦ Persona 4 Revival ✦ Release Date: 02.18.2027
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                ✦ Pre Order Now! ✦ 
+                ✦ Pre Order Now! ✦
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 ✦ Persona 4 Revival ✦ Release Date: 02.18.2027
             </span>
@@ -145,8 +145,8 @@
                                     <div class="card-body">
                                         <div
                                             class="ratio ratio-1x1 rounded mb-2 overflow-hidden bg-secondary-subtle border">
-                                            <img src="images/yu_narukami.png"
-                                                class="w-100 h-100 object-fit-cover" alt="Yu Narukami">
+                                            <img src="images/yu_narukami.png" class="w-100 h-100 object-fit-cover"
+                                                alt="Yu Narukami">
                                         </div>
                                         <h3 class="h6 fw-bold mb-1">Yu Narukami</h3>
                                         <p class="small mb-0">The protagonist</p>
@@ -158,8 +158,8 @@
                                     <div class="card-body">
                                         <div
                                             class="ratio ratio-1x1 rounded mb-2 overflow-hidden bg-secondary-subtle border">
-                                            <img src="images/yosuke_hanamura.png"
-                                                class="w-100 h-100 object-fit-cover" alt="Yosuke Hanamura">
+                                            <img src="images/yosuke_hanamura.png" class="w-100 h-100 object-fit-cover"
+                                                alt="Yosuke Hanamura">
                                         </div>
                                         <h3 class="h6 fw-bold mb-1">Yosuke</h3>
                                         <p class="small mb-0">Partner in Crime</p>
@@ -171,8 +171,8 @@
                                     <div class="card-body">
                                         <div
                                             class="ratio ratio-1x1 rounded mb-2 overflow-hidden bg-secondary-subtle border">
-                                            <img src="images/chie_satonaka.png"
-                                                class="w-100 h-100 object-fit-cover" alt="Chie Satonaka">
+                                            <img src="images/chie_satonaka.png" class="w-100 h-100 object-fit-cover"
+                                                alt="Chie Satonaka">
                                         </div>
                                         <h3 class="h6 fw-bold mb-1">Chie</h3>
                                         <p class="small mb-0">Kung-Fu Junkie</p>
@@ -184,8 +184,8 @@
                                     <div class="card-body">
                                         <div
                                             class="ratio ratio-1x1 rounded mb-2 overflow-hidden bg-secondary-subtle border">
-                                            <img src="images/yukiko_amagi.png"
-                                                class="w-100 h-100 object-fit-cover" alt="Yukiko Amagi">
+                                            <img src="images/yukiko_amagi.png" class="w-100 h-100 object-fit-cover"
+                                                alt="Yukiko Amagi">
                                         </div>
                                         <h3 class="h6 fw-bold mb-1">Yukiko</h3>
                                         <p class="small mb-0">Heir of Amagi Inn</p>
@@ -223,14 +223,65 @@
                     <div class="card-body p-4 d-flex flex-column justify-content-between">
                         <span class="badge text-bg-warning align-self-start">GALLERY</span>
                         <div>
-                            <h2 class="h2 fw-bold">Screenshots &amp; Sound</h2>
+                            <h2 class="h2 fw-bold">Screenshots &amp; Artwork</h2>
                             <p class="text-light-emphasis">
-                                Insert artwork, music, and trailers.
+                                Explore the world of Inaba.
                             </p>
-                            <a href="#home" class="btn btn-outline-warning">Browse media</a>
+
+                            <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                                <div class="carousel-inner rounded">
+
+                                    <div class="carousel-item active">
+                                        <img src="images/media-1.jpg" class="d-block w-100" alt="Yasogami High">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-2.jpg" class="d-block w-100" alt="Tatsuhime Shrine">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-3.jpg" class="d-block w-100" alt="Main Menu UI">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-4.png" class="d-block w-100" alt="Yukiko Status Screen">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-5.jpg" class="d-block w-100" alt="Class">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-6.jpg" class="d-block w-100" alt="All Out Attack">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-7.jpg" class="d-block w-100" alt="Yosuke">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/media-8.png" class="d-block w-100" alt="Social Link">
+                                    </div>
+
+                                </div>
+
+                                <!-- Previous button -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+
+                                <!-- Next button -->
+                                <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             <!-- Social / Store Links -->
@@ -242,8 +293,21 @@
                         </p>
                         <div>
                             <h2 class="h3 fw-bold text-warning">Ready to face the truth?</h2>
-                            <p class="text-dark"> Insert store links (steam, playstation, switch, xbox)</p>
-                            <a href="#home" class="btn btn-dark">Return to top ↑</a>
+                            <div class="row g-2 mt-3">
+                                <div class="col-6">
+                                    <a href="https://store.steampowered.com/app/2963950/Persona_4_Revival/" class="btn btn-dark w-100">Steam ↗</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="https://www.playstation.com/en-us/games/persona-4-revival/" class="btn btn-dark w-100">PlayStation ↗</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-dark w-100 disabled">Nintendo ↗</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="https://www.xbox.com/en-US/games/store/persona-4-revival/9N0D1SHFFK31" class="btn btn-dark w-100">Xbox ↗</a>
+                                </div>
+                            </div>
+                            <a href="#home" class="btn btn-dark my-2">Return to top ↑</a>
                         </div>
                     </div>
                 </div>
