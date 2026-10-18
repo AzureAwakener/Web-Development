@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class VII Character Registry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ede7e4;
+    }
+
+    .header {
+      background-color: #40202b;
+      color: #e8c77c;
+    }
+
+    .character-card {
+      border: 1px solid #d8c5be;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .portrait {
+      height: 210px;
+      object-fit: contain;
+      background-color: #f0e3dd;
+    }
+
+    .student-id {
+      background-color: #40202b;
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    .modal-header {
+      background-color: #40202b;
+      color: #e8c77c;
+    }
+
+    .profile-portrait {
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
+      background-color: #f0e3dd;
+      border-radius: 8px;
+    }
+
+    .profile-label {
+      color: #87616a;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header p-4 mb-4">
+    <div class="container">
+      <h1>CLASS VII</h1>
+      <p class="mb-0">
+        Thors Military Academy Student Registry as of Septian Calendar 1206
+      </p>
+    </div>
+  </header>
+
+  <!-- Character Cards -->
+  <main class="container pb-5">
+    <h2 class="mb-3">Personnel Registry</h2>
+
+    <p class="text-secondary">
+      Select a cadet to view their detailed profile.
+    </p>
+
+    <div class="row g-3" id="characterList"></div>
+  </main>
+
+  <!-- Modal Section/Detailed Profile View -->
+  <div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="profileName" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title" id="profileName">
+              Character Name
+            </h5>
+            <small>THORS MILITARY ACADEMY · CLASS VII</small>
+          </div>
+
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row g-4">
+
+            <!-- Character Portrait -->
+            <div class="col-12 col-md-5">
+              <img id="profileImage" class="profile-portrait" src="" alt="">
+
+              <div class="student-id text-center p-2 mt-2">
+                CADET ID: <span id="profileID"></span>
+              </div>
+            </div>
+
+            <!-- Character Information -->
+            <div class="col-md-7">
+              <div class="mb-3">
+                <div class="profile-label mb-1">Biography</div>
+                <p id="profileBio" class="mb-2"></p>
+              </div>
+
+              <hr>
+
+              <div class="row g-3">
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Age</div>
+                  <div id="profileAge"></div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Date of Birth</div>
+                  <div id="profileDOB"></div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Weapon</div>
+                  <div id="profileWeapon">Sword</div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Combat Role</div>
+                  <div id="profileRole">Physical Attacker</div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Affiliation</div>
+                  <div id="profileAffiliation">Class VII</div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Occupation</div>
+                  <div id="profileOccupation"></div>
+                </div>
+
+                <div class="col-6">
+                  <div class="profile-label mb-1">Status</div>
+                  <div id="profileStatus"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+            Close Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
