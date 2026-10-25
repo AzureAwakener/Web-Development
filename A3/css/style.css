@@ -1,0 +1,170 @@
+:root {
+    --navy: #081426;
+    --deep-blue: #102a4c;
+    --blue: #176b91;
+    --cyan: #68d9e8;
+    --gold: #d9b86c;
+    --pale-gold: #f3e4b7;
+    --paper: #eef3f7;
+    --ink: #17263a;
+}
+
+body {
+    background: var(--paper);
+    background-image: radial-gradient(ellipse at top, rgba(35, 101, 145, 0.13), transparent 55%);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Navigation and footer */
+.navbar.bg-dark,
+footer.bg-dark {
+    background: linear-gradient(110deg, #050c18, var(--navy), #173958);
+}
+
+.navbar.bg-dark {
+    border-bottom: 1px solid var(--gold);
+}
+
+.navbar-brand {
+    color: var(--pale-gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navbar-brand::before {
+    content: "✦";
+    color: var(--cyan);
+    margin-right: 0.6rem;
+}
+
+.navbar-text {
+    color: #c8d9e8;
+    letter-spacing: 0.06em;
+}
+
+footer.bg-dark {
+    color: #d5e4ef;
+    border-top: 1px solid var(--cyan);
+}
+
+/* Hero section */
+header.bg-primary {
+    background: linear-gradient(135deg, #071426, #123c64, #071426);
+    border-bottom: 3px solid var(--gold);
+}
+
+header h1 {
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 22px rgba(104, 217, 232, 0.25);
+}
+
+header .lead {
+    color: #d2e4f1;
+}
+
+/* Headings and search panel */
+main h2,
+main h3 {
+    color: var(--deep-blue);
+}
+
+main section.bg-white {
+    border: 1px solid #d6e0e9;
+    border-top: 3px solid var(--gold);
+    border-radius: 0.75rem;
+}
+
+.form-label {
+    color: var(--deep-blue);
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-color: #cbd8e4;
+    background-color: #fbfdff;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(23, 107, 145, 0.16);
+}
+
+/* Servant cards */
+.card {
+    overflow: hidden;
+    border: 1px solid #d7e1eb;
+    border-radius: 0.7rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 0.9rem 1.8rem rgba(8, 20, 38, 0.15);
+}
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    background: var(--navy);
+    border-bottom: 2px solid var(--gold);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+.card-text {
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.card .btn {
+    margin-top: 0.5rem;
+}
+
+/* Class and rarity badges */
+.badge.text-bg-primary {
+    background-color: var(--blue);
+}
+
+.badge.text-bg-warning {
+    color: #35280e;
+    background-color: var(--pale-gold);
+    border: 1px solid #dfc477;
+}
+
+.badge.text-bg-secondary {
+    background-color: #63758a;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--blue), #124565);
+    border-color: var(--blue);
+}
+
+.btn-primary:hover {
+    background: #0d3857;
+    border-color: var(--cyan);
+}
+
+.btn-outline-primary {
+    color: #145578;
+    border-color: #287da2;
+}
+
+.btn-outline-primary:hover {
+    background: var(--deep-blue);
+    border-color: var(--gold);
+}
