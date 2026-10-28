@@ -107,7 +107,6 @@ main section.bg-white {
 }
 
 .card-img-top {
-    height: 230px;
     object-fit: cover;
     background: var(--navy);
     border-bottom: 2px solid var(--gold);
