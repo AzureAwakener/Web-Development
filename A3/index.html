@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FGO | Servant Explorer</title>
+    <title>Chaldea</title>
+    <link rel="icon" href="images/icon.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -33,7 +34,7 @@
         <section class="bg-white rounded shadow-sm p-4 mb-5">
             <h2 class="h4 mb-3">Find a Servant</h2>
 
-            <form>
+            <form id="servantFilterForm">
                 <div class="row g-3">
                     <div class="col-12 col-md-6">
                         <label for="servantSearch" class="form-label">
@@ -56,7 +57,14 @@
                             <option>Caster</option>
                             <option>Assassin</option>
                             <option>Berserker</option>
-                            <option>Extra Classes</option>
+                            <option>Ruler</option>
+                            <option>Avenger</option>
+                            <option>Mooncancer</option>
+                            <option>Alterego</option>
+                            <option>Foreigner</option>
+                            <option>Pretender</option>
+                            <option>Beast</option>
+                            <option>Shielder</option>
                         </select>
                     </div>
 
@@ -75,7 +83,7 @@
                     </div>
 
                     <div class="col-12">
-                        <button type="button" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Search Servants
                         </button>
                         <button type="reset" class="btn btn-outline-secondary">
