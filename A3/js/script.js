@@ -18,8 +18,23 @@ const getServant = async () => {
     const favorites = servants.filter(servant => favServants.includes(servant.id))
 
     const container = document.getElementById("favoriteServants")
-    container.innerHTML = ""
+    // Modal Data
+    const modalElement = document.getElementById("servantDetailsModal")
+    const servantModal = new bootstrap.Modal(modalElement)
 
+    const modalImage = document.getElementById("modalServantImage")
+    const modalClass = document.getElementById("modalServantClass")
+    const modalRarity = document.getElementById("modalServantRarity")
+    const modalName = document.getElementById("modalServantName")
+    const modalAtk = document.getElementById("modalServantAtk")
+    const modalHp = document.getElementById("modalServantHp")
+    const modalBio = document.getElementById("modalServantBio")
+    const modalCards = document.getElementById("modalServantCards")
+    const modalNpName = document.getElementById("modalServantNpName")
+    const modalNpDescription = document.getElementById("modalServantNpDescription")
+
+    container.innerHTML = ""
+    // Card
     favorites.forEach(servant => {
         const charaImg = servant.extraAssets.charaGraph.ascension[4]
 
@@ -62,7 +77,7 @@ const getServant = async () => {
                     </div>
 
                     <div class="mt-auto">
-                        <button type="button" class="btn btn-outline-primary btn-sm">
+                        <button type="button" class="btn btn-outline-primary btn-sm" data-servant-id="${servant.id}">
                             View Details
                         </button>
                     </div>
@@ -71,6 +86,67 @@ const getServant = async () => {
             </div>
         </div>
     `})
+    // Modal View
+    container.querySelectorAll("[data-servant-id]").forEach(button => {
+        button.addEventListener("click", () => {
+            const servantId = Number(button.dataset.servantId)
+
+            const servant = favorites.find(
+                item => item.id === servantId
+            )
+
+            if (!servant) return
+
+            const charaImg = servant.extraAssets.charaGraph.ascension[4]
+            const charaBio = servant.profile.comments[0].comment || "No biography available."
+
+            modalImage.src = charaImg
+            modalImage.alt = servant.name
+
+            modalClass.textContent = capitalizeFirstLetter(servant.className)
+            modalRarity.textContent = "★".repeat(servant.rarity)
+
+            modalName.textContent = servant.name
+            modalAtk.textContent = servant.atkMax.toLocaleString()
+            modalHp.textContent = servant.hpMax.toLocaleString()
+            modalBio.textContent = charaBio
+
+            const cardTypes = {
+                1: { name: "Buster", color: "#dc3545" },
+                2: { name: "Arts", color: "#0d6efd" },
+                3: { name: "Quick", color: "#198754" }
+            }
+
+            modalCards.innerHTML = ""
+
+            servant.cards.forEach(card => {
+                const cardType = cardTypes[card]
+
+                if (!cardType) return
+
+                modalCards.innerHTML += `
+                <span
+                    class="badge"
+                    style="background-color: ${cardType.color}; color: white;"
+                >
+                    ${capitalizeFirstLetter(cardType.name)}
+                </span>
+            `
+            })
+
+            const noblePhantasm = servant.noblePhantasms[0]
+
+            if (noblePhantasm) {
+                modalNpName.src = noblePhantasm.icon || ""
+                modalNpName.alt = noblePhantasm.name || "Noble Phantasm Artwork"
+                modalNpDescription.textContent = noblePhantasm.detail || "No Noble Phantasm description available."
+            } else {
+                modalNpDescription.textContent = "No Noble Phantasm available."
+            }
+
+            servantModal.show()
+        })
+    })
 }
 
 getServant()

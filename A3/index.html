@@ -104,6 +104,82 @@
         </section>
     </main>
 
+    <!-- Servant Details Modal -->
+    <div class="modal fade" id="servantDetailsModal" tabindex="-1" aria-labelledby="servantDetailsTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content servant-modal">
+
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="servantDetailsTitle">
+                        Servant Details
+                    </h2>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4">
+
+                        <!-- Servant Artwork -->
+                        <div class="col-12 col-md-5">
+                            <img src="" id="modalServantImage" class="img-fluid rounded servant-modal-artwork" alt="">
+                        </div>
+
+                        <!-- Servant Information -->
+                        <div class="col-12 col-md-7">
+
+                            <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
+                                <span class="badge" id="modalServantClass"></span>
+                                <span class="servant-rarity" id="modalServantRarity"></span>
+                            </div>
+
+                            <h3 class="h4 mb-3 modal-name" id="modalServantName"></h3>
+
+                            <div class="row g-2 mb-4">
+                                <div class="col-6">
+                                    <div class="servant-stat p-3 rounded">
+                                        <small>MAX ATK</small>
+                                        <h6 class="mb-0" id="modalServantAtk"></h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="servant-stat p-3 rounded">
+                                        <small>MAX HP</small>
+                                        <h6 class="mb-0" id="modalServantHp"></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h6 modal-biography">Biography</h4>
+                            <p id="modalServantBio" class="servant-modal-bio"></p>
+
+                            <h4 class="h6 mt-4 modal-cmc">Command Cards</h4>
+                            <div id="modalServantCards" class="d-flex gap-2 flex-wrap"></div>
+
+                            <div class="servant-noble-phantasm mt-4">
+                                <h4 class="h6">Noble Phantasm</h4>
+
+                                <img src="" id="modalServantNpName" class="img-fluid rounded mb-2" alt="Noble Phantasm Artwork">
+
+                                <p class="servant-modal-bio mb-0" id="modalServantNpDescription"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-dark text-white text-center py-3">
         <p class="mb-0">Chaldea | Fan-made project</p>
     </footer>
